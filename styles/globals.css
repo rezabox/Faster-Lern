@@ -27,3 +27,10 @@ a {
 }
 
 @import url("./custom.css");
+
+.swiper-button-next,.swiper-button-prev{
+  padding: .2rem;
+  border-radius: .2rem !important;
+  width: 2rem !important;
+  height: 2rem !important;
+}
