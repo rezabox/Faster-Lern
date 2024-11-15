@@ -7,13 +7,18 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { BiSearchAlt } from "react-icons/bi";
+import { CiUser } from "react-icons/ci";
+import { HiShoppingCart } from "react-icons/hi";
+
+
 const Header = () => {
   const [logoHover, setLogoHover] = useState(0);
 
   return (
     <header className="container mx-auto py-2">
-      <div className="flex justify-between items-center">
-        <div className="flex flex-col relative h-52">
+      <div className="flex justify-between items-start gap-4">
+        <div className="flex flex-col relative h-52 w-48">
           <Link
             href={"/"}
             onMouseEnter={() => setLogoHover(1)}
@@ -45,7 +50,7 @@ const Header = () => {
             <BsTelegram className="text-[1.5rem] transition-all duration-300 hover:text-orange-300 cursor-pointer" />
           </div>
         </div>
-        <div className="w-5/6 flex flex-col gap-1">
+        <div className="w-full flex flex-col h-40  justify-between py-4 gap-1">
           <div className="flex justify-between items-center w-full">
             <nav>
               <ul className="flex items-center justify-between space-x-reverse space-x-5">
@@ -106,10 +111,33 @@ const Header = () => {
               </div>
             </div>
           </div>
+          <div className="flex items-center justify-between">
+            <div className="relative flex items-center justify-start  w-full ml-8  ">
+              <input
+                className="outline-none w-full h-[3.2rem] p-3 mt-4  rounded-lg text-lg shadow-[0px_0px_5px_rgba(0,0,0,.15)] transition-all duration-500 focus:shadow-[0px_0px_15px_rgba(0,0,0,.15)]"
+                name="productsSearch"
+                id="productsSearch"
+                type="text"
+                placeholder="جستجو بین محصولات..."
+              />
+              <label className="productsSearch w-12 mt-4 absolute left-0 cursor-pointer ">
+                <BiSearchAlt className="w-10 h-10" />
+              </label>
+            </div>
+            <div className="flex gap-5 items-center w-[20rem] justify-end  mt-5">
+            <div>
+               <CiUser className="bg-zinc-400 text-white w-12 h-12 p-2 rounded-md"/>
+            </div>
+            <div className="flex gap-2 p-2 rounded-md items-center justify-center bg-orange-400">
+              <div className="text-orange-500 bg-white rounded-full w-8 h-8 flex items-center justify-center">0</div>
+              <div className="text-white">سبد خرید</div>
+              <div className="text-orange-500 bg-white rounded-lg w-8 h-8 flex items-center justify-center"><HiShoppingCart className="w-6 h-6"/></div>
+            </div> 
+            </div>
+          </div>
         </div>
       </div>
     </header>
   );
 };
-
 export default Header;
