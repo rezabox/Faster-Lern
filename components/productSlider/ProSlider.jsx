@@ -36,7 +36,7 @@ const ProSlider1 = ({title, linkComp}) => {
                   className="cursor-pointer bg-zinc-200 transition-all duration-300 hover:bg-orange-400 w-10 h-10 p-3 rounded"
                 />
               </div>
-              <Link href={linkComp} className="bg-orange-500 border-white border-2 px-4 py-2 rounded-md transition-all duration-500 text-white hover:bg-orange-400">مشاهده همه </Link>
+              <Link href={`/${linkComp}`} className="bg-orange-500 border-white border-2 px-4 py-2 rounded-md transition-all duration-500 text-white hover:bg-orange-400">مشاهده همه </Link>
             </div>
           </header>
           <div
