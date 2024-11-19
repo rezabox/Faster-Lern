@@ -3,8 +3,7 @@ import React, { useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 import Link from "next/link";
-import SliderGraphic from "./SliderGraph";
-
+import SliderGraphic1 from "./SliderGraph";
 
 
 const GraphicSlider = ({title, linkComp}) => {
@@ -20,15 +19,14 @@ const GraphicSlider = ({title, linkComp}) => {
   };
 
   return (
-    <main className="bg-indigo-500 mb-[30px] mt-5 p-5">
-      <div className="container mx-auto py-8">
+    <main className="bg-yellow-500 mb-[30px] mt-5 md:p-5  p-10">
+      <div className="relatives container mx-auto py-8">
         <section className="flex flex-col gap-4">
           <header className="flex justify-between items-center ">
-            <h2 className="font-semibold text-2xl border-r-white pr-1 text-white">
+            <h2 className="font-semibold text-2xl border-r-white pr-1 text-black">
               فایل های گرافیکی
             </h2>
-            <div className="flex items-center justify-between gap-5">
-              <div className="flex items-center gap-1 text-zinc-500">
+            <div className="absolute mt-[90%] md:mt-[30%]  left-0 right-0 flex justify-between items-center transform -translate-y-1/2 sm:left-4 sm:right-4 lg:left-0 lg:right-0">
                 <FaChevronRight
                   onClick={() => caroselSwitcher(1)}
                   className="cursor-pointer bg-zinc-200 transition-all duration-300 hover:bg-orange-400 w-10 h-10 p-3 rounded"
@@ -38,7 +36,8 @@ const GraphicSlider = ({title, linkComp}) => {
                   className="cursor-pointer bg-zinc-200 transition-all duration-300 hover:bg-orange-400 w-10 h-10 p-3 rounded"
                 />
               </div>
-              <Link href={'/'} className="bg-orange-500 border-white border-2 px-4 py-2 rounded-md transition-all duration-500 text-white hover:bg-orange-400">مشاهده همه </Link>
+            <div className="flex items-center justify-between gap-5">   
+              <Link href={'/'} className="bg-indigo-500 border-white border-2 px-4 py-2 rounded-md transition-all duration-500 text-white hover:bg-indigo-300 hover:text-black">مشاهده همه </Link>
             </div>
           </header>
           <div
@@ -46,19 +45,19 @@ const GraphicSlider = ({title, linkComp}) => {
             className="sliderContainer w-full  overflow-x-hidden "
           >
             <div className="flex justify-between items-center gap-4 w-[4000px]">
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
-              <SliderGraphic /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
+              <SliderGraphic1 /> 
             </div>
           </div>
         </section>
