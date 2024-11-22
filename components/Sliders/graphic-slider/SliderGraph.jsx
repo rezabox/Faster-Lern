@@ -10,8 +10,8 @@ import { IoMdResize } from "react-icons/io";
 
 const SliderGraphic1 = () => {
   return (
-    <article className="sliderItem p-1 hover:mt-[-20px] transition-all duration-500">
-      <div className="relative h-[30rem] w-73 bg-zinc-200 rounded-md cursor-pointer">
+    <article className="sliderItem  hover:mt-[-20px] transition-all duration-500">
+      <div className="relative  h-[30rem] w-73 bg-zinc-200 rounded-md cursor-pointer">
         <Link href={"/shop"}>
           <Image
             width={350}
@@ -26,7 +26,7 @@ const SliderGraphic1 = () => {
                    قالب فروشگاه فایل وردپرسی المنتور مناسب برای همه کس 
             </h3>
           </Link>
-          <div className="flex flex-col gap-3 text-zinc-500 text-base sm:text-sm">
+          <div className="flex flex-col gap-3 p-2 text-zinc-500 text-base sm:text-sm">
             <div className="flex items-center justify-between p-2">
               <div className="flex justify-start items-center gap-2">
                 <RiBrushFill className="w-5 h-5" />
@@ -68,8 +68,8 @@ const SliderGraphic1 = () => {
               </div>
             </Link>
           </div>
-          <div className="absolute bottom-2 w-full  flex items-center justify-between">
-            <div className="flex items-center justify-start gap-2">
+          <div className="absolute bottom-2 w-full  flex items-center justify-between px-2">
+            <div className="flex items-center justify-start gap-2 ">
               <RiPriceTagLine className="mr-1 w-10 h-10 p-2 rounded text-indigo-600 hover:text-white bg-zinc-100 transition-all duration-300 hover:bg-orange-300 cursor-pointer" />
               <AiOutlineFileSearch className="mr-1 w-10 h-10 p-2 rounded text-indigo-600 hover:text-white bg-zinc-100 transition-all duration-300 hover:bg-orange-300 cursor-pointer" />
             </div>

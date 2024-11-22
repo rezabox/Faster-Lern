@@ -26,14 +26,14 @@ const GraphicSlider = ({title, linkComp}) => {
             <h2 className="font-semibold text-2xl border-r-white pr-1 text-black">
               فایل های گرافیکی
             </h2>
-            <div className="absolute mt-[90%] md:mt-[30%]  left-0 right-0 flex justify-between items-center transform -translate-y-1/2 sm:left-4 sm:right-4 lg:left-0 lg:right-0">
+            <div className="absolute mt-[100%]  md:mt-[30%]  left-0 right-0 flex justify-between items-center transform -translate-y-1/2 sm:left-[-14px] sm:right-[-14px] lg:left-0 lg:right-0">
                 <FaChevronRight
                   onClick={() => caroselSwitcher(1)}
-                  className="cursor-pointer bg-zinc-200 transition-all duration-300 hover:bg-orange-400 w-10 h-10 p-3 rounded"
+                  className="cursor-pointer bg-zinc-200 transition-all duration-300 hover:bg-orange-400 w-10 h-10 p-3  rounded"
                 />
                 <FaChevronLeft
                   onClick={() => caroselSwitcher(-1)}
-                  className="cursor-pointer bg-zinc-200 transition-all duration-300 hover:bg-orange-400 w-10 h-10 p-3 rounded"
+                  className="cursor-pointer bg-zinc-200 transition-all duration-300 hover:bg-orange-400 w-10 h-10 p-3  rounded"
                 />
               </div>
             <div className="flex items-center justify-between gap-5">   

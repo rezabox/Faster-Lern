@@ -35,4 +35,10 @@ a {
   height: 2rem !important;
 }
 
+.arrow{
+   visibility: hidden;
+}
+.arrow.active{
+  visibility: visible;
+}
 

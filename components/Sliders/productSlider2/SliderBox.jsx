@@ -19,7 +19,7 @@ const SliderBox2 = () => {
           />
         </div>
         <div>
-          <h3 className="m-2 line-clamp-3">عنوان این محصول این است که کتاب گنج زندگی اثری از ولیام چو است </h3>
+          <h3 className="m-2 line-clamp-2">عنوان این محصول این است که کتاب گنج زندگی اثری از ولیام چو است </h3>
           <div className="categories flex items-center justify-start flex-wrap gap-3 p-2">
             <Link href={'/'}>
               <div className="py-1 px-2 rounded bg-zinc-200 transition-all duration-300 hover:bg-zinc-300">

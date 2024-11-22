@@ -19,13 +19,6 @@ const Home = () => {
         <GraphicCategories />
         <GraphicSlider/>
         <BlogCard/>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-          veritatis expedita neque unde iste quae soluta ut explicabo blanditiis
-          a. Dolore rerum magni eius expedita accusantium commodi debitis
-          necessitatibus earum.
-        </p>
-        <Index />
       </div>
     </main>
   );
