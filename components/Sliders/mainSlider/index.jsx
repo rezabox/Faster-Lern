@@ -32,11 +32,9 @@ const Slider = () => {
             <div className="flex justify-center items-center">
               <Image 
                 src={'/images/slider/slide1.jpg'}
-                ObjectFit="cover"
                 className="rounded-lg"
                 width={1280}
                 height={300}
-                layout="fixed"
                 alt="alt"
               />
             </div>
@@ -45,11 +43,9 @@ const Slider = () => {
             <div className="flex justify-center items-center">
               <Image 
                 src={'/images/slider/slide2.jpg'}
-                ObjectFit="cover"
                 className="rounded-lg"
                 width={1280}
                 height={300}
-                layout="fixed"
                 alt="alt"
               />
             </div>
@@ -58,11 +54,9 @@ const Slider = () => {
             <div className="flex justify-center items-center">
               <Image 
                 src={'/images/slider/slide3.jpg'}
-                ObjectFit="cover"
                 className="rounded-lg"
                 width={1280}
                 height={300}
-                layout="fixed"
                 alt="alt"
               />
             </div>
