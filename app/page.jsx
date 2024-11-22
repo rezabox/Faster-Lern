@@ -6,6 +6,7 @@ import ProSlider1 from "@/components/Sliders/productSlider/ProSlider";
 import ProSlider2 from "@/components/Sliders/productSlider2/ProSlider";
 import GraphicSlider from "@/components/Sliders/graphic-slider/graphicSlider";
 import { AiFillCopyrightCircle } from "react-icons/ai";
+import BlogCard from "@/components/newBlogs";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <ProSlider2 title="کتاب ها" linkComp='books'/>
         <GraphicCategories />
         <GraphicSlider/>
+        <BlogCard/>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
           veritatis expedita neque unde iste quae soluta ut explicabo blanditiis

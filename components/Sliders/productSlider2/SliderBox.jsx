@@ -14,8 +14,6 @@ const SliderBox2 = () => {
           <Image
             width={350}
             height={140}
-            objectFit="cover"
-            layout="fixed"
             src={"/images/ganj.jpg"}
             alt="alt"
           />
