@@ -88,7 +88,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="/blog"
                     className="w-32 h-10 rounded-md bg-zinc-200 flex justify-center items-center transition-all duration-300 hover:bg-orange-300 hover:text-white"
                   >
                     وبلاگ
