@@ -16,8 +16,6 @@ const SliderGraphic1 = () => {
           <Image
             width={350}
             height={140}
-            objectFit="cover"
-            layout="fixed"
             src={"/images/2019-8-4af22eea-4f8b-4ccf-b007-81d0c513ae84-638bab29c15792b1de48b0a9.jpg"}
             alt="alt"
           />
