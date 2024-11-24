@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <div className="container mx-auto flex flex-col gap-8 py-6">
-      <div className="md:flex justify-around items-center p-8 bg-zinc-200 rounded-lg">
+      <div className="md:flex justify-between items-center p-8 bg-zinc-200 rounded-lg">
         <div>
           <div className="flex justify-center">
             <Image
@@ -27,9 +27,9 @@ const Footer = () => {
           </div>
           <p className="text-center">سایت فستر لرن در حوزه کسب و کار آنلاین فعالیت می کند .</p>
         </div>
-        <div className="md:flex lg:w-[50%] md:w-[100%] justify-between  items-center m-auto text-center space-y-5 md:m-none md:text-none md:space-y-0">
+        <div className="xl:flex w-[90%] lg:w-[60%] justify-between  items-center m-auto text-center space-y-5 md:m-none md:text-none md:space-y-0">
           <div className="md:flex lg:gap-20 md:gap-10 p-5">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-8 ">
             <div className="text-lg">دسترسی سریع</div>
             <ul className="space-y-3">
               <li>
@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-8">
             <div className="text-lg">راهنمای خرید</div>
             <ul  className="space-y-3">
               <li>
