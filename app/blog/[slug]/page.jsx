@@ -11,7 +11,7 @@ const SingleBlog = () => {
     <div className="flex flex-col gap-12">
       <BreadCrumb
         secondTitle={"وبلاگ"}
-        secondLink={"/"}
+        secondLink={"/blog"}
         title={"آموزش نکست پیشرفته؟"}
       />
       <section className="flex items-center justify-start mt-5">
@@ -30,7 +30,7 @@ const SingleBlog = () => {
         </h1>
         <div className="flex items-center justify-start gap-5 mt-3  text-base sm:text-sm">
           <div className="bg-zinc-100 rounded-md p-2 flex justify-center items-center gap-2 ">
-            <GrFormView className="w-8 h-8" />
+            <GrFormView className="w-5 h-5" />
             <span>تعداد بازدید:</span>
             <span>5</span>
           </div>
@@ -46,7 +46,7 @@ const SingleBlog = () => {
           </div>
         </div>
       </section>
-      <section className="mt-5 w-[80%] flex flex-col gap-6">
+      <section className="mt-5 flex flex-col gap-6">
         <h2 className="text-xl">توضیحات کامل</h2>
         <p className="text-justify mt-2 leading-9">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
@@ -62,11 +62,11 @@ const SingleBlog = () => {
           قرار گیرد.
         </p>
       </section>
-      <section className="mt-5 w-[80%] flex flex-col gap-6">
+      <section className="mt-5 flex flex-col  ">
         <h2 className="text-xl">مطالب مرتبط</h2>
-        <BlogSlider/>
-      </section>
-      <section className="mt-5 flex flex-col gap-6 w-[80%]">
+          <BlogSlider/>
+      </section> 
+      <section className="mt-5 flex flex-col gap-6 ">
         <h2 className="text-xl">دیدگاه ها</h2>
         <form className="bg-zinc-700 rounded-md h-48">
             1
