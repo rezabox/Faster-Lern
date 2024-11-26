@@ -5,7 +5,7 @@ import { FaChevronLeft } from "react-icons/fa";
 import BlogDetail from "./BlogDetail";
 
 
-const BlogSlider = () => {
+const BlogSlider = ({title}) => {
   const carouselRef = useRef();
   const caroselSwitcher = (data) => {
     if (carouselRef.current) {
@@ -23,6 +23,7 @@ const BlogSlider = () => {
         <section className="flex flex-col gap-4">
           <header className="flex justify-between items-center ">
             <div className="flex items-center justify-between gap-5">
+              <h2 className="text-xl">{title}</h2>
               <div className="flex items-center gap-1 text-zinc-500">
                 <FaChevronRight
                   onClick={() => caroselSwitcher(1)}
@@ -39,10 +40,7 @@ const BlogSlider = () => {
             ref={carouselRef}
             className="sliderContainer w-full  overflow-x-hidden "
           >
-            <div className="flex justify-between items-center gap-4 w-[2000px]">
-              <BlogDetail />
-              <BlogDetail />
-              <BlogDetail />
+            <div className="flex justify-between items-center gap-4 w-[1000px]">
               <BlogDetail />
               <BlogDetail />
               <BlogDetail />

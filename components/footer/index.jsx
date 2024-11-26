@@ -106,7 +106,7 @@ const Footer = () => {
         </p>
         <HiOutlineArrowUp
           onClick={() => goTopCtrl()}
-          className="w-8 h-8 rounded-md cursor-pointer bg-yellow-400 animate-bounce transition-all duration-500 hover:text-white hover:bg-yellow-600"
+          className="fixed left-4 bottom-4 w-8 h-8 rounded-md cursor-pointer border-3 border-red-300 bg-yellow-400 animate-bounce transition-all duration-500 hover:text-white hover:bg-yellow-600"
         />
       </div>
       <p className="text-center text-base"> 
