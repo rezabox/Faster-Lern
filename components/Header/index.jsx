@@ -126,13 +126,13 @@ const Header = () => {
             </div>
             <div className="flex gap-5 items-center w-[20rem] justify-end  mt-5">
             <div>
-               <CiUser className="bg-zinc-400 text-white w-12 h-12 p-2 rounded-md"/>
+               <Link href={'/account'}><CiUser className="bg-zinc-400 text-white w-12 h-12 p-2 rounded-md"/></Link>
             </div>
-            <div className="flex gap-2 p-2 rounded-md items-center justify-center bg-orange-400">
+            <Link href={"/cart"} className="flex gap-2 p-2 rounded-md items-center justify-center bg-orange-400">
               <div className="text-orange-500 bg-white rounded-full w-8 h-8 flex items-center justify-center">0</div>
               <div className="text-white">سبد خرید</div>
               <div className="text-orange-500 bg-white rounded-lg w-8 h-8 flex items-center justify-center"><HiShoppingCart className="w-6 h-6"/></div>
-            </div> 
+            </Link> 
             </div>
           </div>
         </div>
