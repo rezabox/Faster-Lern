@@ -8,7 +8,7 @@ const LayoutBlog = ({ children }) => {
       <main className="w-[70%]">{children}</main>
       <aside className="w-80 max-w-80 p-2 rounded-md  flex flex-col gap-12">
         <div className="flex flex-col gap-4">
-           <button className="flex items-center justify-center rounded-md p-2 w-full text-center bg-orange-500 transition-all duration-300 hover:bg-orange-600 text-white">افزودن به سبد خرید30,000</button>
+           <button className="flex items-center justify-center rounded-md p-2 w-full text-center bg-orange-500 transition-all duration-300 hover:bg-orange-600 text-white">افزودن به سبد خرید30,000 هزار تومان</button>
            <button className="flex items-center justify-center rounded-md p-2 w-full text-center bg-blue-500 transition-all duration-300 hover:bg-blue-600 text-white">افزودن به علاقه مندی ها </button>
         </div>
         <div className="flex flex-col ga-6 rounded-lg shadow-[0px_0px_8px_rgba(0,0,0,0.35)] p-3">
