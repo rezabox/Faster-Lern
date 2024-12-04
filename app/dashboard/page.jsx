@@ -1,11 +1,13 @@
-import React from 'react'
+import MainDashboard from "@/components/dashboardCtrl/mainDashboard";
+import React from "react";
 
-const page = () =>{
+const page = () => {
   return (
-    <section className='container mx-auto p-12 flex items-center justify-center'>
-        <div className="px-8 py-4 rounded-md bg-orange-500 text-white ">داشبورد سایت</div>
-    </section>
-  )
-}
+    <div className="flex justify-between items-start gap-1 container mx-auto">
+      <MainDashboard />
+      <div className="">text</div>
+    </div>
+  );
+};
 
 export default page;
