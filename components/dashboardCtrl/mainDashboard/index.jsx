@@ -17,15 +17,15 @@ const MainDashboard = () => {
   },[contentchander])
 
   return (
-    <div className="w-50 bg-zinc-200 flex items-center justify-center  p-4 rounded-md">
-      <div className="flex flex-col gap-6">
+    <div className="w-full rounded-md">
+      <div className="flex p-4 items-start justify-between bg-red-300 gap-12 ">
         <DashboardCtrl
           contentchander={contentchander}
           setContentchander={setContentchander}
-        />
-        <div>
-            {details}
-        </div>
+          />
+          <div>
+              {details}
+          </div>
       </div>
     </div>
   );
