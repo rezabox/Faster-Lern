@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import axios from "axios";
 
 const NewMidBaner = () => {
@@ -21,7 +21,13 @@ const NewMidBaner = () => {
     
     axios.post(url, formData)
     .then(d=>console.log('ok'))
-    .catch(e=>console.log('error'))
+    .catch(e=> {
+        if(formData.image == ''){
+          alert('عکس را به طور کامل وارد کنید.')
+        }else if(formData.imageAlt == ''){
+          alert('آلت عکس را وارد کنید.')
+        }
+    })
   };
 
   return (
