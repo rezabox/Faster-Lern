@@ -3,7 +3,7 @@ import DashboardBtn from "./btn";
 
 const DashboardCtrl = ({ contentchander, setContentchander }) => {
   return (
-    <div className="w-50 bg-zinc-200 flex items-center justify-center  p-4 rounded-md">
+    <div className="w-50 bg-zinc-200 flex items-center justify-center  p-4 rounded-lg">
       <div className="flex flex-col gap-6">
         <DashboardBtn
           title={"بنر های تبلیغاتی "}

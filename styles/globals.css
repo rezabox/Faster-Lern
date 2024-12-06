@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'react-toastify/dist/ReactToastify.css';
 
 html,
 body {
@@ -9,6 +10,10 @@ body {
   font-family: shabnam,-apple-system,  sans-serif;
   direction: rtl;
   color: #55555f;
+}
+.Toastify__toast-body {
+  font-family: shabnam,-apple-system,  sans-serif;
+  direction: rtl;
 }
 
 a {

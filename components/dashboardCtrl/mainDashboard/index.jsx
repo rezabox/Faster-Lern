@@ -18,12 +18,12 @@ const MainDashboard = () => {
 
   return (
     <div className="w-full rounded-md">
-      <div className="flex p-4 items-start justify-between bg-red-300 gap-12 ">
+      <div className="flex  items-start justify-between  gap-4 container mx-auto ">
         <DashboardCtrl
           contentchander={contentchander}
           setContentchander={setContentchander}
           />
-          <div>
+          <div className="w-full ">
               {details}
           </div>
       </div>

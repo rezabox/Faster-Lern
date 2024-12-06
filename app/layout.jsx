@@ -1,6 +1,8 @@
 import Header from '@/components/Header';
 import '../styles/globals.css';
 import Footer from '@/components/footer';
+import Toastify from '../components/library/Toastify';
+
 
 export const metadata = {
    title: 'Faster lern',
@@ -14,6 +16,7 @@ export default function RootLayout({ children }) {
             <Header/>
             {children}
             <Footer/>
+            <Toastify/>
          </body>
       </html>
    )
