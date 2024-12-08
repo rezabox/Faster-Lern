@@ -20,7 +20,7 @@ const NewMidBaner = () => {
     console.log(url);
     
     axios.post(url, formData)
-    .then(d=>console.log('ok'))
+    .then(d=> alert('is ok'))
     .catch(e=> {
         if(formData.image == ''){
           alert('عکس را به طور کامل وارد کنید.')
