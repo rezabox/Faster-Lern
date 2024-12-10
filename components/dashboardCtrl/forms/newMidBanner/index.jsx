@@ -17,7 +17,6 @@ const NewMidBaner = () => {
       situation: imageSituationRef.current.value,
     };
     const url = `http://localhost:27017/api/new-middle-banners`;
-    console.log(url);
     
     axios.post(url, formData)
     .then(d=> alert('is ok'))
