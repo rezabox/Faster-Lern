@@ -4,7 +4,7 @@ import axios from "axios";
 import Box from "./Box";
 import Image from "next/image";
 
-const AllMidBanners = () => {
+const AllMidBanners = ({setmidBanCtrl}) => {
   const [banners, setbanners] = useState([]);
 
   const [pageNumber, setPageNumber] = useState(1);
@@ -42,7 +42,7 @@ const AllMidBanners = () => {
             />
           </div>
         ) : (
-          banners.map((ba, i) => <Box key={i} data={ba} />)
+          banners.map((ba, i) => <Box setmidBanCtrl={setmidBanCtrl} key={i} data={ba} />)
         )}
       </div>
       <div className="flex justify-center gap-4 items-center">
@@ -58,6 +58,7 @@ const AllMidBanners = () => {
         ) : (
           numbersOfbtns.map((da, i) => (
             <button
+              key={i}
               className="flex items-center justify-center rounded-md bg-indigo-500 hover:bg-orange-400 transition-all duration-400 text-white w-12 h-12"
               onClick={() => {
                 setPageNumber(da + 1);
