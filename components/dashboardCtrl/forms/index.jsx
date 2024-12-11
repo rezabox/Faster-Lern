@@ -9,7 +9,9 @@ const MiddleBannerAll = () => {
   const [det,setDet] =useState(<AllMidBanners setmidBanCtrl={setmidBanCtrl}/>);
   
   useEffect(()=>{
-     setDet(<NewBannerDetails midBanId={midBanDetCtrl}/>)
+     if(midBanDetCtrl != "") {
+       setDet(<NewBannerDetails midBanId={midBanDetCtrl}/>);
+     }
   },[midBanDetCtrl])
 
   return (
