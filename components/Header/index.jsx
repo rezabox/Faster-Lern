@@ -94,6 +94,14 @@ const Header = () => {
                     وبلاگ
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/dashboard"
+                    className="w-32 h-10 rounded-md bg-zinc-200 flex justify-center items-center transition-all duration-300 hover:bg-orange-300 hover:text-white"
+                  >
+                    داشبورد
+                  </Link>
+                </li>
               </ul>
             </nav>
             <div className="flex flex-col items-end gap-2">
