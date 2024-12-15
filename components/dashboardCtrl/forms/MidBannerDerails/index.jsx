@@ -8,7 +8,13 @@ const NewBannerDetails = ({ midBanId }) => {
   const imageLinkRef = useRef();
   const imageSituationRef = useRef();
 
-  const submiter = (e) => {
+  const formKeyNotSuber = (event) => {
+       if (event.key == "Enter") {
+           event.preventDefault();        
+       }
+  }
+
+  const submiterUpdate = (e) => {
     e.preventDefault();
     const formData = {
       goalId: midBanId,
@@ -22,8 +28,7 @@ const NewBannerDetails = ({ midBanId }) => {
     axios
       .post(url, formData)
       .then((d) => alert("is ok"))
-      .catch((e) => console.log('error'));
-      
+      .catch((e) => console.log("error"));
   };
   const [imageUrlS, setimageUrlS] = useState("");
   const [imageAltS, setImageAltS] = useState("");
@@ -42,10 +47,29 @@ const NewBannerDetails = ({ midBanId }) => {
       .catch((e) => console.log("error"));
   }, [midBanId]);
 
+  const remove = () => {
+    const formData = {
+      goalId: midBanId,
+    };
+    const url = `http://localhost:27017/api/delete-middle-banners`;
+    axios
+      .post(url, formData)
+      .then((d) => alert("removed"))
+      .catch((e) => console.log("error"));
+  };
+
   return (
     <div className="flex flex-col gap-8">
-      <h2 className="text-orange-500">جزئیات بنر</h2>
-      <form onSubmit={submiter} className="flex flex-col gap-7">
+      <div className="flex justify-between items-center">
+        <h2 className="text-orange-500">جزئیات بنر</h2>
+        <button
+          onClick={() => remove()}
+          className="bg-rose-600 text-white hover:bg-rose-500 duration-500 transition-all px-4 py-1 rounded-md text-xs"
+        >
+          حذف بنر
+        </button>
+      </div>
+      <form onKeyDown={formKeyNotSuber} onSubmit={submiterUpdate} className="flex flex-col gap-7">
         <div className="flex flex-col gap-2">
           <div>آدرس جدید عکس</div>
           <input
