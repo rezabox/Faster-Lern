@@ -22,7 +22,7 @@ const AllMidBanners = ({setmidBanCtrl,setrandNumForBannerClick}) => {
       .then((d) => {
         setbanners(d.data.GoalMidBans);
         setnumberOfBtns(
-          Array.from(Array(Math.ceil(d.data.AllMidBansNum / 2)).keys())
+          Array.from(Array(Math.ceil(d.data.AllMidBansNum / 10)).keys())
         );
         goTopCtrl();
       })

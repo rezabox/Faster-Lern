@@ -15,7 +15,7 @@ import Image from "next/image";
 
 SwiperCore.use([Autoplay]);
 
-const Slider = () => {
+const Slider = ({ data }) => {
   return (
     <main>
       <section className="container mx-auto">
@@ -28,39 +28,19 @@ const Slider = () => {
           autoplay={{ delay: 3000 }}
           scrollbar={{ draggable: true }}
         >
-          <SwiperSlide>
-            <div className="flex justify-center items-center">
-              <Image 
-                src={'/images/slider/slide1.jpg'}
-                className="rounded-lg"
-                width={1280}
-                height={300}
-                alt="alt"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex justify-center items-center">
-              <Image 
-                src={'/images/slider/slide2.jpg'}
-                className="rounded-lg"
-                width={1280}
-                height={300}
-                alt="alt"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex justify-center items-center">
-              <Image 
-                src={'/images/slider/slide3.jpg'}
-                className="rounded-lg"
-                width={1280}
-                height={300}
-                alt="alt"
-              />
-            </div>
-          </SwiperSlide>
+          {data.map((da, i) => (
+            <SwiperSlide key={i}>
+              <div className="flex justify-center items-center">
+                <Image
+                  src={da.image}
+                  className="rounded-lg"
+                  width={1280}
+                  height={300}
+                  alt={da.imageAlt}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </section>
     </main>

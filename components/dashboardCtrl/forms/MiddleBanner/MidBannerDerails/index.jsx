@@ -73,6 +73,7 @@ const NewBannerDetails = ({ midBanId }) => {
         <div className="flex flex-col gap-2">
           <div>آدرس جدید عکس</div>
           <input
+            required={true}
             type="text"
             defaultValue={imageUrlS}
             ref={imageUrlRef}
@@ -82,6 +83,7 @@ const NewBannerDetails = ({ midBanId }) => {
         <div className="flex flex-col gap-2">
           <div>آلت جدید عکس</div>
           <input
+            required={true}
             type="text"
             defaultValue={imageAltS}
             ref={imageAltRef}
@@ -91,6 +93,7 @@ const NewBannerDetails = ({ midBanId }) => {
         <div className="flex flex-col gap-2">
           <div>لینک جدید عکس</div>
           <input
+            required={true}
             type="text"
             defaultValue={imageLinkS}
             ref={imageLinkRef}
