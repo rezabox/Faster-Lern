@@ -19,7 +19,7 @@ const MiddleBanner = async () => {
          ) : (
             <section className=" container mx-auto flex justify-between items-center flex-wrap">
                {data.map((banner, i) => (
-                  <Link className=" my-4" href={banner.link} key={i}>
+                  <Link className="my-4" href={banner.link} key={i}>
                      <Image
                         className=" rounded-xl"
                         alt={banner.imageAlt}

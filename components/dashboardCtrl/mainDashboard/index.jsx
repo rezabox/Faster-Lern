@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import DashboardCtrl from "..";
-import MiddleBannerAll from "../forms";
-import SliderForm from "../sliderform";
+import MiddleBannerAll from "../forms/MiddleBanner";
+import SliderAll from '../forms/sliderForms';
 
 const MainDashboard = () => {
   const [contentchander, setContentchander] = useState("midBan");
@@ -11,7 +11,7 @@ const MainDashboard = () => {
     if (contentchander == 'midBan'){
         setDetails(<MiddleBannerAll />)
     }else if(contentchander == 'sliders'){
-        setDetails(<SliderForm />)
+        setDetails(<SliderAll />)
     }
 
   },[contentchander])
