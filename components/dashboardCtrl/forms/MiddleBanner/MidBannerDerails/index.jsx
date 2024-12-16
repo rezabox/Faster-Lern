@@ -1,6 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 const NewBannerDetails = ({ midBanId }) => {
   const imageUrlRef = useRef();
@@ -9,10 +12,10 @@ const NewBannerDetails = ({ midBanId }) => {
   const imageSituationRef = useRef();
 
   const formKeyNotSuber = (event) => {
-       if (event.key == "Enter") {
-           event.preventDefault();        
-       }
-  }
+    if (event.key == "Enter") {
+      event.preventDefault();
+    }
+  };
 
   const submiterUpdate = (e) => {
     e.preventDefault();
@@ -27,8 +30,39 @@ const NewBannerDetails = ({ midBanId }) => {
 
     axios
       .post(url, formData)
-      .then((d) => alert("is ok"))
-      .catch((e) => console.log("error"));
+      .then((d) => {
+        formData.situation == "true"
+          ? toast.success("بنر تبلیغاتی با موفقیت منتشر شد.", {
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            })
+          : toast.success("بنر تبلیغاتی به صورت پیشنویس ذخیره شد.", {
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+      })
+      .catch((e) => {
+        let message = "متاسفانه ناموفق بود.";
+        if (e.response.data.msg) {
+          message = e.response.data.msg;
+        }
+        toast.error(message, {
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      });
   };
   const [imageUrlS, setimageUrlS] = useState("");
   const [imageAltS, setImageAltS] = useState("");
@@ -44,7 +78,16 @@ const NewBannerDetails = ({ midBanId }) => {
         setImageLink(d.data.link);
         setimageSituationS(d.data.situation);
       })
-      .catch((e) => console.log("error"));
+      .catch((e) =>
+        toast.error("خطا در لود اطلاعات", {
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+      );
   }, [midBanId]);
 
   const remove = () => {
@@ -54,8 +97,30 @@ const NewBannerDetails = ({ midBanId }) => {
     const url = `http://localhost:27017/api/delete-middle-banners`;
     axios
       .post(url, formData)
-      .then((d) => alert("removed"))
-      .catch((e) => console.log("error"));
+      .then((d) => {
+        toast.success("بنر با موفقیت حذف شد.", {
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      })
+      .catch((e) => {
+        let message = "متاسفانه ناموفق بود.";
+        if (e.response.data.msg) {
+          message = e.response.data.msg;
+        }
+        toast.error(message, {
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      });
   };
 
   return (
@@ -69,7 +134,11 @@ const NewBannerDetails = ({ midBanId }) => {
           حذف بنر
         </button>
       </div>
-      <form onKeyDown={formKeyNotSuber} onSubmit={submiterUpdate} className="flex flex-col gap-7">
+      <form
+        onKeyDown={formKeyNotSuber}
+        onSubmit={submiterUpdate}
+        className="flex flex-col gap-7"
+      >
         <div className="flex flex-col gap-2">
           <div>آدرس جدید عکس</div>
           <input
@@ -126,6 +195,19 @@ const NewBannerDetails = ({ midBanId }) => {
           به روز رسانی
         </button>
       </form>
+      <ToastContainer
+        bodyClassName={() => "font-[shabnam] text-sm flex items-center"}
+        position="top-right"
+        autoClose={3000}
+        theme="colored"
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={true}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
