@@ -1,12 +1,21 @@
 "use client";
 import React, { useRef } from "react";
 import axios from "axios";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 const NewMidBaner = () => {
   const imageUrlRef = useRef();
   const imageAltRef = useRef();
   const imageLinkRef = useRef();
   const imageSituationRef = useRef();
+
+  const formKeyNotSuber = (event) => {
+    if (event.key == "Enter") {
+      event.preventDefault();
+    }
+  };
 
   const submiter = (e) => {
     e.preventDefault();
@@ -19,7 +28,25 @@ const NewMidBaner = () => {
     const url = `http://localhost:27017/api/new-middle-banners`;
     
     axios.post(url, formData)
-    .then(d=> alert('is ok'))
+    .then(d=> {
+        formData.situation == 'true'
+        ? toast.success("بنر تبلیغاتی با موفقیت منتشر شد.", {
+                      autoClose: 3000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                    })
+                  : toast.success("بنر تبلیغاتی به صورت پیشنویس ذخیره شد.", {
+                      autoClose: 3000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                    });
+    })
     .catch(e=> {
         if(formData.image == ''){
           alert('عکس را به طور کامل وارد کنید.')
@@ -32,7 +59,7 @@ const NewMidBaner = () => {
   return (
     <div className="flex flex-col gap-8">
       <h2 className="text-orange-500">بنر جدید</h2>
-      <form onSubmit={submiter} className="flex flex-col gap-7">
+      <form onKeyDown={formKeyNotSuber} onSubmit={submiter} className="flex flex-col gap-7">
         <div className="flex flex-col gap-2">
           <div>آدرس عکس</div>
           <input
@@ -77,6 +104,19 @@ const NewMidBaner = () => {
           ارسال
         </button>
       </form>
+        <ToastContainer
+              bodyClassName={() => "font-[shabnam] text-sm flex items-center"}
+              position="top-right"
+              autoClose={3000}
+              theme="colored"
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={true}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+         />
     </div>
   );
 };
